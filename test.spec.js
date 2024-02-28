@@ -305,8 +305,8 @@ test("test27", async ({ page }) => {
     // Indonesia
     await page.getByRole("link", { name: "id", exact: true }).click();
     await page.locator('#left-column').getByRole('link', { name: 'Aksesoris' }).click();
-    const Checkidct1 = await expect(page.getByText('Supplier', { exact: true })).toBeVisible();
-    const Checkidct2 = await expect(page.getByRole('link', { name: 'Brand' })).toBeVisible();
+    const Checkidct1 = await expect(page.getByText('Pemasok', { exact: true })).toBeVisible();
+    const Checkidct2 = await expect(page.getByRole('link', { name: 'Merek' })).toBeVisible();
     await page.waitForTimeout(1000);
     await page.click('button:has-text("Relevansi")');
     await expect(page.locator('#js-product-list-top')).toContainText('Relevansi');
